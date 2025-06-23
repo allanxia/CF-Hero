@@ -1,0 +1,47 @@
+# Git相关文件
+.git
+.gitignore
+
+# Docker相关文件
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# 文档和图片
+README.md
+img/
+*.md
+
+# 临时文件和缓存
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE和编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日志文件
+*.log
+
+# 测试和覆盖率文件
+coverage.out
+*.test
+
+# 本地配置文件
+config/
+input/
+output/
+
+# 操作系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db 
