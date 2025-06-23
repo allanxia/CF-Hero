@@ -6,38 +6,11 @@ services:
       context: .
       dockerfile: Dockerfile
     image: cf-hero:latest
-    container_name: cf-hero
     restart: unless-stopped
-    
-    # 挂载配置文件和输入文件
-    volumes:
-      - ./config:/home/cfhero/.config
-      - ./input:/home/cfhero/input
-      - ./output:/home/cfhero/output
     
     # 环境变量
     environment:
       - TZ=Asia/Shanghai
     
-    # 网络配置
-    networks:
-      - cf-hero-network
-    
-    # 如果需要使用代理
-    # environment:
-    #   - HTTP_PROXY=http://proxy:8080
-    #   - HTTPS_PROXY=http://proxy:8080
-    
-    # 默认运行帮助命令，实际使用时需要覆盖
-    command: ["--help"]
-
-networks:
-  cf-hero-network:
-    driver: bridge
-
-# 如果需要持久化存储
-volumes:
-  cf-hero-config:
-    driver: local
-  cf-hero-data:
-    driver: local 
+    # 保持容器运行以便执行命令
+    command: ["tail", "-f", "/dev/null"] 

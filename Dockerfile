@@ -45,9 +45,6 @@ RUN chown -R cfhero:cfhero /home/cfhero
 # 切换到非root用户
 USER cfhero
 
-# 暴露端口（如果需要的话）
-# EXPOSE 8080
-
 # 设置入口点
 ENTRYPOINT ["./cf-hero"]
 
