@@ -47,8 +47,5 @@ RUN chown -R cfhero:cfhero /home/cfhero
 # 切换到非root用户
 USER cfhero
 
-# 设置入口点
-ENTRYPOINT ["./cf-hero"]
-
-# 默认命令参数
-CMD ["--help"] 
+# 默认行为：如果没有命令，显示帮助；如果有命令，执行命令
+CMD ["./cf-hero", "--help"] 
