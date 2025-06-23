@@ -17,4 +17,4 @@ services:
       - ./examples:/home/cfhero/examples
     
     # 启动时自动运行示例扫描，然后保持容器运行
-    command: ["sh", "-c", "./cf-hero -f examples/domains.txt && tail -f /dev/null"] 
+    command: ["sh", "-c", "./cf-hero -f domains.txt && tail -f /dev/null"] 

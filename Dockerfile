@@ -36,8 +36,10 @@ WORKDIR /home/cfhero
 # 从构建阶段复制二进制文件
 COPY --from=builder /app/cf-hero .
 
-# 创建配置目录
-RUN mkdir -p .config
+# 创建配置目录和默认域名文件
+RUN mkdir -p .config && \
+    echo "https://baidu.com" > domains.txt && \
+    echo "https://github.com" >> domains.txt
 
 # 设置权限
 RUN chown -R cfhero:cfhero /home/cfhero
