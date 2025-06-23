@@ -1,0 +1,14 @@
+# CF-Hero API 配置示例
+# 请将下面的占位符替换为您的真实API密钥
+
+zoomeye:
+  - "your_zoomeye_api_key_here"
+
+securitytrails:
+  - "your_securitytrails_api_key_here"
+
+shodan:
+  - "your_shodan_api_key_here"
+
+censys:
+  - "your_censys_api_key_here" 

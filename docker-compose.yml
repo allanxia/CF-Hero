@@ -12,5 +12,9 @@ services:
     environment:
       - TZ=Asia/Shanghai
     
-    # 保持容器运行以便执行命令
-    command: ["tail", "-f", "/dev/null"] 
+    # 挂载示例文件
+    volumes:
+      - ./examples:/home/cfhero/examples
+    
+    # 启动时自动运行示例扫描，然后保持容器运行
+    command: ["sh", "-c", "./cf-hero -f examples/domains.txt && tail -f /dev/null"] 
